@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dermatologyapp.shahanchor.com.dermatologist.feedback.FeedbackActivity">
+
+    <include
+        android:id="@+id/appBarFeedback"
+        layout="@layout/appbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarFeedback"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scaleX="1.2"
+            android:text="Feedback"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:background="@color/colorAppBackground"
+            android:padding="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rectangle_shape"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/textView_feedback_fontIconUserName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Abc"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/textView_Feedback_UserName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/editTextEnterName"
+                    android:singleLine="true" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rectangle_shape"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/textView_feedback_fontIconEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Abc"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/textView_Feedback_UserEmail"
+                    android:layout_width="0dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="@string/editTextEmailHint"
+                    android:singleLine="true" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rectangle_shape"
+                android:weightSum="4">
+
+                <Spinner
+                    android:id="@+id/spinner_feedbackType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:entries="@array/feedback_types"
+                    android:gravity="center"
+                    android:padding="10dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rectangle_shape"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/feedbackDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:gravity="center|left"
+                    android:hint="@string/editTextFeedbackDetails" />
+
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/buttonFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_rectangle"
+            android:text="@string/buttonFeedbackLabel" />
+    </LinearLayout>
+</RelativeLayout>
